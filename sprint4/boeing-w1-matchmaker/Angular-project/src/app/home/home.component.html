@@ -1,0 +1,38 @@
+<body>
+  <div class="container md-form form-lg d-flex justify-content-center">
+    <form class="form-inline" (submit)="getResults(searchQuery)">
+      <input type="text" class="form-control" placeholder="Search for Employees" [(ngModel)]="searchQuery" name="searchQuery">
+      <button type="submit" class="btn animated pulse infinite">Search</button>
+    </form>
+  </div>
+  
+<div class="container">
+  
+  <div class="flex-container"> 
+     <div *ngFor="let profile of SearchResult"> 
+      <div class="card mb-3 animated slideInUp" style="min-width: 18rem;">
+        <div class="card-header bg-dark text-white" (click)="portfolioRedirect(profile.profileId)">{{profile.profileId | titlecase}}</div>
+        <div class="card-body text-dark">
+          <h6 class="card-subtitle mb-2">Stays in {{profile.city | titlecase}}</h6>
+          <p class="card-text">Knows about {{profile.skills}}</p>
+          <a href="#" class="card-link">{{profile.experience}} years experienced</a>
+        </div>
+      </div>
+     </div> 
+      
+
+</div>
+</div>
+  <!-- {{profile.profileId}}
+  {{profile.skills}}
+  {{profile.experience}} 
+  {{profile.city}} -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>

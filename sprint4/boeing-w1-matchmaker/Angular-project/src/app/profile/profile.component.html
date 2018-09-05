@@ -1,0 +1,59 @@
+<div class="bgimg-1"> <br><br><br><br><br><br>
+  <h1>Welcome {{name | titlecase}}</h1> 
+  <div class="caption1 d-flex justify-content-center">
+      <span *ngIf="imgCheck"> 
+        <img id="img2" class="img-fluid rounded-circle" src={{image.src}}>
+      </span>
+  </div>
+</div>
+
+
+
+<div class="container profileSection">
+  <div class="flex-container">
+
+    <div class="column">
+      <app-personal-info></app-personal-info>
+      <app-certificates></app-certificates>
+    </div>
+    <div class="column">
+      <app-skills></app-skills>
+      <app-location></app-location>
+      <app-academic-qualifications></app-academic-qualifications>
+    </div>
+    <div class="column">
+      <app-experience></app-experience>
+      <app-projects></app-projects>
+    </div>
+
+  </div>
+
+  <br>
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+              <h4>Press on plus icon to start filling your profile</h4>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button mat-fab color="primary" class="btn" id="addProfile" type="button" data-toggle="dropdown"><mat-icon>add</mat-icon>
+      <span class="caret"></span></button>
+    <ul class="dropdown-menu drop">
+      <li><a href="#myModal1" data-toggle="modal" class="dropdown-item">Personal Info</a></li>
+      <li><a href="#myModal2" data-toggle="modal" class="dropdown-item">Skills</a></li>
+      <li><a href="#myModal3" data-toggle="modal" class="dropdown-item">Experience</a></li>
+      <li><a href="#myModal4" data-toggle="modal" class="dropdown-item">Location</a></li>
+      <li><a href="#myModal5" data-toggle="modal" class="dropdown-item">Projects</a></li>
+      <li><a href="#myModal6" data-toggle="modal" class="dropdown-item">Training and Certification</a></li>
+      <li><a href="#myModal7" data-toggle="modal" class="dropdown-item">Academic Qualification</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="container">
+
+</div>
